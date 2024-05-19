@@ -61,9 +61,10 @@ def main(decrypt, encrypt):
 
         with open('encrypted_message.txt', 'wb') as file:
             file.write(encrypted_message)
-            file.write(key.decode())
+            file.write(key.decode().encode())
     else:
         print("Please provide either --decrypt or --encrypt option")
 
 if __name__ == "__main__":
     main()
+    #
